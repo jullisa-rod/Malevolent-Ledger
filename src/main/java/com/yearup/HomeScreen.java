@@ -75,6 +75,7 @@ public class HomeScreen {
 
                 case "l":
                     System.out.println("Accessing your ledger!");
+                    break;
 
 
                 case "x":
