@@ -50,7 +50,7 @@ public class HomeScreen {
 
                     //date|time|description|vendor|amount
                     String deposit = date + "|" + time + "|" + description + "|" + vendor + "|" + amount;
-                    System.out.println(deposit);
+                    FileInput(deposit);
 
                     break;
 
@@ -71,6 +71,7 @@ public class HomeScreen {
                     String payment = dateP + "|" + timeP + "|" + descriptionP + "|" + vendorP + "|" + amountP;
 
                     System.out.println(payment);
+                    break; // finishes your while loop to do it again
 
                 case "l":
                     System.out.println("Accessing your ledger!");
@@ -87,7 +88,7 @@ public class HomeScreen {
 
     }
 
-    public void WritingToReader() {
+    public void FileInput(String input) {
         try {
             // create a FileWriter
             FileWriter fileWriter = new FileWriter("transactions.csv" , true);
@@ -95,7 +96,7 @@ public class HomeScreen {
             BufferedWriter bufWriter = new BufferedWriter(fileWriter);
             // write to the file
             String text;
-            bufWriter.append("\n");
+            bufWriter.append("input + \n");
             // close the writer
             bufWriter.close();
         }
