@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.sql.Array;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ledger {
@@ -66,39 +68,45 @@ public class Ledger {
                 case "h":
                     System.out.println("back to home screen");
                     break;
-
-
-                private List<Transaction> reader(){
-                    List<Transaction> list = new ArrayList<Transaction>();
-                }
-                try {
-                    // create a FileReader object connected to the File
-                    FileReader fileReader = new FileReader("transactions.csv");
-                    // create a BufferedReader to manage input stream
-                    BufferedReader bufReader = new BufferedReader(fileReader);
-                    String input;
-                    // read until there is no more data
-                    while ((input = bufReader.readLine()) != null) {
-                        String[] info = input.split("\\|");
-                        LocalDate date = LocalDate.parse(info[0]);
-                        LocalTime time = LocalTime.parse(info[1]);
-                        String description = info[3];
-                        String vendor = info[3];
-                        double amount = Double.parseDouble(info[4]);
-
-                        Transaction entry = new transactions(date, time, description, vendor, amount);
-                        list.add(entry);
-                    }
-                    // close the stream and release the resources
-                    bufReader.close();
-                } catch (IOException e) {
-                    // display stack trace if there was an error
-                    e.printStackTrace();
-
-                }
-                return list;
             }
 
+
+            }
         }
+
+    private List<Transaction> reader(){
+        List<Transaction> list = new ArrayList<Transaction>();
+
+        try {
+            // create a FileReader object connected to the File
+            FileReader fileReader = new FileReader("transactions.csv");
+            // create a BufferedReader to manage input stream
+            BufferedReader bufReader = new BufferedReader(fileReader);
+            String input;
+            // read until there is no more data
+            while ((input = bufReader.readLine()) != null) {
+                String[] info = input.split("\\|");
+                LocalDate date = LocalDate.parse(info[0]);
+                LocalTime time = LocalTime.parse(info[1]);
+                String description = info[3];
+                String vendor = info[3];
+                double amount = Double.parseDouble(info[4]);
+
+                Transaction entry = new Transaction(date, time, description, vendor, amount);
+                list.add(entry);
+            }
+            // close the stream and release the resources
+            bufReader.close();
+        } catch (IOException e) {
+            // display stack trace if there was an error
+            e.printStackTrace();
+
+        }
+        return list;
     }
+
+
 }
+
+
+

@@ -10,11 +10,11 @@ public class Transaction {
     LocalTime time;
     String description;
     String vendor;
-    float amount;
+    double amount;
 
 
     //constructor:
-    public Transaction (LocalDate date, LocalTime time, String description, String vendor, float amount) {
+    public Transaction (LocalDate date, LocalTime time, String description, String vendor, double amount) {
         this.date = date;
         this.time = time;
         this.description = description;
@@ -57,11 +57,11 @@ public class Transaction {
         this.vendor = vendor;
     }
 
-    public float getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(float amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
