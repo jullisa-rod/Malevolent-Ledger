@@ -38,24 +38,31 @@ public class Ledger {
             //    and display all entries for that vendor
             // 0) Back - go back to the Ledger page
             // H) Home - go back to the home page
-
+            System.out.println("a. display all");
             System.out.println("d. display deposit");
             System.out.println("p. display payment");
             System.out.println("r. access your report");
-            System.out.println("x. exit");
             System.out.println("h. back to home screen");
             System.out.print("Pick here: ");
             //User should input their data (scanner)
             String choice = scanner.nextLine();
 
             switch (choice) {
+                case "a":
+                    System.out.println("all display");
+                    displayAll(transaction);
+                    break;
+
+
                 case "d":
                     System.out.println("you chose display deposit");
+                    displayDeposits(transaction);
                     break;
 
 
                 case "p":
                     System.out.println("you chose display payment");
+                    displayPayments(transaction);
                     break;
 
 
@@ -63,15 +70,9 @@ public class Ledger {
                     System.out.println("you chose display report");
                     break;
 
-
-                case "x":
-                    System.out.println("exit");
-                    break;
-
-
                 case "h":
                     System.out.println("back to home screen");
-                    break;
+                    return;
             }
 
 
@@ -112,8 +113,6 @@ public class Ledger {
     private static void displayAll(List<Transaction> list) {
         for(var i = 0; i < list.size(); i++){
             System.out.println(list.get(i).toString());
-
-
         }
     }
     private static void displayDeposits(List<Transaction> list) {
@@ -121,9 +120,13 @@ public class Ledger {
             if(list.get(i).getAmount() >= 0){
                System.out.println(list.get(i).toString());
             }
-
-
-
+        }
+    }
+    private static void displayPayments(List<Transaction> list) {
+        for(var i = 0; i < list.size(); i++){
+            if(list.get(i).getAmount() < 0){
+                System.out.println(list.get(i).toString());
+            }
         }
     }
 

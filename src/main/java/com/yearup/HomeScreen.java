@@ -99,7 +99,7 @@ public class HomeScreen {
             BufferedWriter bufWriter = new BufferedWriter(fileWriter);
             // write to the file
             String text;
-            bufWriter.append("input + \n");
+            bufWriter.append(input + "\n");
             // close the writer
             bufWriter.close();
         }
