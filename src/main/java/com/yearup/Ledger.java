@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Ledger {
+    private static final String fileName = "transaction.csv";
+    private static  final List<Transaction> transaction = reader();
+
+
     public static void showLedger() {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
@@ -74,7 +78,7 @@ public class Ledger {
             }
         }
 
-    private List<Transaction> reader(){
+    private static List<Transaction> reader(){
         List<Transaction> list = new ArrayList<Transaction>();
 
         try {
@@ -105,6 +109,23 @@ public class Ledger {
         return list;
     }
 
+    private static void displayAll(List<Transaction> list) {
+        for(var i = 0; i < list.size(); i++){
+            System.out.println(list.get(i).toString());
+
+
+        }
+    }
+    private static void displayDeposits(List<Transaction> list) {
+        for(Transaction t : list){
+            if(t.getAmount() > 0){
+                System.out.println(t);
+            }
+
+
+
+        }
+    }
 
 }
 

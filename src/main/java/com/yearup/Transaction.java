@@ -23,6 +23,10 @@ public class Transaction {
 
     }
 
+    @Override
+    public String toString() {
+        return "\n" + date + "|" + time+ "|" + description + "|" + vendor + "|" + amount;
+    }
     //getters and setters
 
     public LocalDate getDate() {
