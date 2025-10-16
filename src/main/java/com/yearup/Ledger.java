@@ -1,5 +1,8 @@
 package com.yearup;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Ledger {
@@ -62,7 +65,25 @@ public class Ledger {
                     break;
 
 
+    private
 
+                try
+                {
+            // create a FileReader object connected to the File
+                    FileReader fileReader = new FileReader("transactions.csv");
+            // create a BufferedReader to manage input stream
+                    BufferedReader bufReader = new BufferedReader(fileReader);
+                    String input;
+            // read until there is no more data
+                    while((input = bufReader.readLine()) != null) {
+                        String[]
+                    }
+            // close the stream and release the resources
+                    bufReader.close();
+                }
+                catch(IOException e) {
+            // display stack trace if there was an error
+                    e.printStackTrace();
 
             }
         }
