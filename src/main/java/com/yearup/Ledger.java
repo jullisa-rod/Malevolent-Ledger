@@ -117,9 +117,9 @@ public class Ledger {
         }
     }
     private static void displayDeposits(List<Transaction> list) {
-        for(Transaction t : list){
-            if(t.getAmount() > 0){
-                System.out.println(t);
+        for(var i = 0; i < list.size(); i++){
+            if(list.get(i).getAmount() >= 0){
+               System.out.println(list.get(i).toString());
             }
 
 
