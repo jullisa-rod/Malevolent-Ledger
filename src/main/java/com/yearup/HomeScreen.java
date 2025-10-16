@@ -69,12 +69,13 @@ public class HomeScreen {
 
                     //date|time|description|vendor|amount
                     String payment = dateP + "|" + timeP + "|" + descriptionP + "|" + vendorP + "|" + amountP;
-
-                    System.out.println(payment);
+                    FileInput(payment);
                     break; // finishes your while loop to do it again
 
                 case "l":
                     System.out.println("Accessing your ledger!");
+                    Ledger ledger = new Ledger();
+
                     break;
 
 
