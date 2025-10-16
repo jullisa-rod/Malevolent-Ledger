@@ -19,9 +19,9 @@ public class HomeScreen {
 //        information and save it to the csv file
 //   L) Ledger - display the ledger screen
 //   X) Exit - exit the application
-
+        System.out.println("Welcome to Malevolent Ledger, where we handle your money like it's our own!");
         while (running) {
-            System.out.println("Welcome to Malevolent Ledger, where we handle your money like it's our own!");
+            //System.out.println("Welcome to Malevolent Ledger, where we handle your money like it's our own!");
             System.out.println("d. Make a deposit?");
             System.out.println("p. Make a Payment");
             System.out.println("l. Access your ledger");
@@ -75,6 +75,7 @@ public class HomeScreen {
                 case "l":
                     System.out.println("Accessing your ledger!");
                     Ledger ledger = new Ledger();
+
 
                     break;
 
