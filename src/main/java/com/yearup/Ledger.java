@@ -3,7 +3,7 @@ package com.yearup;
 import java.util.Scanner;
 
 public class Ledger {
-    public void showLedger() {
+    public static void showLedger() {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
