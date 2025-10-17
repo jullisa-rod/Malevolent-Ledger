@@ -24,7 +24,8 @@ However, unlike typical ledger tools, Malevolent Ledger incorporates a **dark fo
 
 | Home Screen Menu|
 |------------------------------------------------------------|
-| <img width="629" height="204" alt="image" src="https://github.com/user-attachments/assets/60855127-192e-431a-b789-1b87949973a5" />
+| <img width="632" height="181" alt="image" src="https://github.com/user-attachments/assets/7b747df1-e9c4-4372-b312-824c61ea6cc6" />
+
 |
 | Deposit Menu |
 |------------------------------------------------------------|
