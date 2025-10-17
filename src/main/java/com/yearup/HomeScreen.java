@@ -25,13 +25,14 @@ public class HomeScreen {
         System.out.println("""
                 |\\/|  _. |  _      _  |  _  ._  _|_    |   _   _|  _   _  ._
                 |  | (_| | (/_ \\/ (_) | (/_ | |  |_    |_ (/_ (_| (_| (/_ |\s
-                                                                    _|      \s""");
+                                                                   _|      \s""");
+        System.out.println("Make a selection...  ");
 
         while (running) {
-            //System.out.println("Welcome to Malevolent Ledger, where we handle your money like it's our own!");
-            System.out.println("d. Make a deposit");
+            //System.out.println("Make another choice");
+            System.out.println("d. Make a Deposit");
             System.out.println("p. Make a Payment");
-            System.out.println("l. Access your ledger");
+            System.out.println("l. Access your Ledger");
             System.out.println("x. Exit");
             System.out.print("Enter a character here: ");
             //User should input their data (scanner)
@@ -45,15 +46,15 @@ public class HomeScreen {
 
                 case "d":
                     simulateLoading("Now opening Deposit Screen ");
-                    System.out.println("add a deposit"); // prompt user for the deposit information
+                    System.out.println("Enter deposit info \uD83D\uDD2A "); // prompt user for the deposit information
                     LocalDate date = LocalDate.now(); // computer generates the date and time when its .now
                     LocalTime time = LocalTime.now();
 
-                    System.out.println("description");
+                    System.out.println("Description");
                     String description = scanner.nextLine(); //scanner.nextLine()*holds user input*
-                    System.out.println("vendor");
+                    System.out.println("Vendor");
                     String vendor = scanner.nextLine();
-                    System.out.println("amount");
+                    System.out.println("Amount");
                     double amount = Double.parseDouble(scanner.nextLine()); // "wrap" it so that it changes the string(from user) to diff type
 
                     //date|time|description|vendor|amount
@@ -65,15 +66,15 @@ public class HomeScreen {
 
                 case "p":
                     simulateLoading("Now opening Payment Screen ");
-                    System.out.println("make a payment");//prompt user for the debit information and save it to the csv file
+                    System.out.println("Enter Payment Info \uD83E\uDE78");//prompt user for the debit information and save it to the csv file
                     LocalDate dateP = LocalDate.now(); // computer generates the date and time when its .now
                     LocalTime timeP = LocalTime.now();
 
-                    System.out.println("description");
+                    System.out.println("Description");
                     String descriptionP = scanner.nextLine(); //scanner.nextLine()*holds user input*
-                    System.out.println("vendor");
+                    System.out.println("Vendor");
                     String vendorP = scanner.nextLine();
-                    System.out.println("amount");
+                    System.out.println("Amount");
                     double amountP = -1*Double.parseDouble(scanner.nextLine()); // "wrap" it so that it changes the string(from user) to diff type
 
                     //date|time|description|vendor|amount
