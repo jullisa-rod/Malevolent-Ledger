@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
 
+import static com.yearup.Start.simulateLoading;
+
 public class HomeScreen {
     public void showHomeScreen() {
         Scanner scanner = new Scanner(System.in);
@@ -19,14 +21,19 @@ public class HomeScreen {
 //        information and save it to the csv file
 //   L) Ledger - display the ledger screen
 //   X) Exit - exit the application
-        System.out.println("Welcome to Malevolent Ledger, where we handle your money like it's our own!");
+        System.out.println("Welcome to: ");
+        System.out.println("""
+                |\\/|  _. |  _      _  |  _  ._  _|_    |   _   _|  _   _  ._
+                |  | (_| | (/_ \\/ (_) | (/_ | |  |_    |_ (/_ (_| (_| (/_ |\s
+                                                                    _|      \s""");
+
         while (running) {
             //System.out.println("Welcome to Malevolent Ledger, where we handle your money like it's our own!");
-            System.out.println("d. Make a deposit?");
+            System.out.println("d. Make a deposit");
             System.out.println("p. Make a Payment");
             System.out.println("l. Access your ledger");
             System.out.println("x. Exit");
-            System.out.print("Pick here: ");
+            System.out.print("Enter a character here: ");
             //User should input their data (scanner)
             String choice = scanner.nextLine();
 
@@ -37,6 +44,7 @@ public class HomeScreen {
                 // date|time|description|vendor|amount
 
                 case "d":
+                    simulateLoading("Now opening Deposit Screen ");
                     System.out.println("add a deposit"); // prompt user for the deposit information
                     LocalDate date = LocalDate.now(); // computer generates the date and time when its .now
                     LocalTime time = LocalTime.now();
@@ -56,6 +64,7 @@ public class HomeScreen {
 
 
                 case "p":
+                    simulateLoading("Now opening Payment Screen ");
                     System.out.println("make a payment");//prompt user for the debit information and save it to the csv file
                     LocalDate dateP = LocalDate.now(); // computer generates the date and time when its .now
                     LocalTime timeP = LocalTime.now();
@@ -73,7 +82,7 @@ public class HomeScreen {
                     break; // finishes your while loop to do it again
 
                 case "l":
-                    System.out.println("Accessing your ledger!");
+                    simulateLoading("Now opening your Ledger ");
                     Ledger.showLedger();
 
 
@@ -81,10 +90,12 @@ public class HomeScreen {
 
 
                 case "x":
-                    System.out.println("exit");
+                    System.out.println("Goodbye");
+                    running = false;
 
                 default:
                     System.out.println("Invalid choice, try again!");
+                    break;
             }
 
         }

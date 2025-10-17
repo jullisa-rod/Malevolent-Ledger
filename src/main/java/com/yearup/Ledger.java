@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.yearup.Start.simulateLoading;
+
 public class Ledger {
     private static final String fileName = "transaction.csv";
     private static  final List<Transaction> transaction = reader();
@@ -49,25 +51,27 @@ public class Ledger {
 
             switch (choice) {
                 case "a":
-                    System.out.println("all display");
+                    simulateLoading("Now displaying all ");
                     displayAll(transaction);
                     break;
 
 
                 case "d":
-                    System.out.println("you chose display deposit");
+                    simulateLoading("Now displaying deposit ledger ");
                     displayDeposits(transaction);
                     break;
 
 
                 case "p":
-                    System.out.println("you chose display payment");
+                    simulateLoading("Now displaying payment ledger ");
                     displayPayments(transaction);
                     break;
 
 
                 case "r":
-                    System.out.println("you chose display report");
+                    simulateLoading("Now displaying ledger report ");
+                    Report report = new Report();
+                    report.showReport();
                     break;
 
                 case "h":
@@ -111,7 +115,7 @@ public class Ledger {
     }
 
     private static void displayAll(List<Transaction> list) {
-        for(var i = 0; i < list.size(); i++){
+        for(var i = list.size() - 1; i >= 0; i--){
             System.out.println(list.get(i).toString());
         }
     }
