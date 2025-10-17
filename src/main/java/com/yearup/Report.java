@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.yearup.Start.simulateLoading;
 
 
 public class Report {
@@ -69,7 +70,7 @@ public class Report {
                     break;
 
                 case "0":
-                    System.out.println("Returning back to Ledger ");
+                    simulateLoading("Returning back to Ledger... ");
                     return;
                 }
             }

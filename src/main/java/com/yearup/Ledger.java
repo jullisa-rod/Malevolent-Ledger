@@ -51,31 +51,31 @@ public class Ledger {
 
             switch (choice) {
                 case "a":
-                    simulateLoading("Now displaying all ");
+                    simulateLoading("Now displaying all... ");
                     displayAll(transaction);
                     break;
 
 
                 case "d":
-                    simulateLoading("Now displaying deposit ledger ");
+                    simulateLoading("Now displaying deposit ledger... ");
                     displayDeposits(transaction);
                     break;
 
 
                 case "p":
-                    simulateLoading("Now displaying Payment Ledger ");
+                    simulateLoading("Now displaying Payment Ledger... ");
                     displayPayments(transaction);
                     break;
 
 
                 case "r":
-                    simulateLoading("Now displaying Ledger Report ");
+                    simulateLoading("Now displaying Ledger Report... ");
                     Report report = new Report();
                     report.showReport();
                     break;
 
                 case "h":
-                    simulateLoading("Now returning to Home Screen ");
+                    simulateLoading("Now returning to Home Screen... ");
                     return;
             }
 
