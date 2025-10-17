@@ -69,7 +69,7 @@ public class Report {
                     break;
 
                 case "0":
-                    System.out.println("Returning back to ledger ");
+                    System.out.println("Returning back to Ledger ");
                     return;
                 }
             }
