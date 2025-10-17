@@ -63,19 +63,19 @@ public class Ledger {
 
 
                 case "p":
-                    simulateLoading("Now displaying payment ledger ");
+                    simulateLoading("Now displaying Payment Ledger ");
                     displayPayments(transaction);
                     break;
 
 
                 case "r":
-                    simulateLoading("Now displaying ledger report ");
+                    simulateLoading("Now displaying Ledger Report ");
                     Report report = new Report();
                     report.showReport();
                     break;
 
                 case "h":
-                    System.out.println("back to home screen");
+                    simulateLoading("Now returning to Home Screen ");
                     return;
             }
 
