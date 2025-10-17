@@ -93,9 +93,9 @@ public class HomeScreen {
                     System.out.println("Goodbye");
                     running = false;
 
-                default:
-                    System.out.println("Invalid choice, try again!");
-                    break;
+                    //default:
+                    //System.out.println("Invalid choice, try again!");
+                    //break;
             }
 
         }
