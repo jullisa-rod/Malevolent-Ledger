@@ -90,7 +90,7 @@ public class Report {
                 String[] info = input.split("\\|");
                 LocalDate date = LocalDate.parse(info[0]);
                 LocalTime time = LocalTime.parse(info[1]);
-                String description = info[3];
+                String description = info[2];
                 String vendor = info[3];
                 double amount = Double.parseDouble(info[4]);
 
